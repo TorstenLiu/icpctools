@@ -18,8 +18,8 @@ RUN source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk install java 17.0.1-open
 
 # Install CDS
 RUN mkdir -p /opt && \
-    curl -L -o /opt/wlp.CDS-${CDS_VERSION}.zip https://github.com/icpctools/icpctools/releases/download/v${CDS_VERSION}/wlp.CDS-${CDS_VERSION}.zip && \
-    unzip /opt/wlp.CDS-${CDS_VERSION}.zip -d /opt
+    curl -L -o /opt/wlp.CDS-2.5.994.zip https://github.com/icpctools/icpctools/releases/download/v2.5.994/wlp.CDS-2.5.994.zip && \
+    unzip /opt/wlp.CDS-2.5.994.zip -d /opt
 
 COPY accounts.yaml /opt/wlp/usr/servers/cds/config/accounts.yaml
 COPY cdsConfig.xml /opt/wlp/usr/servers/cds/config/cdsConfig.xml
